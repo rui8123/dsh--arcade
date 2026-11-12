@@ -1,0 +1,13 @@
+{
+  "name": "dsh-arcade",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "游戏厅：坦克大战（奶龙版）+ 五子棋联机",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node gomoku-server.mjs"
+  }
+}

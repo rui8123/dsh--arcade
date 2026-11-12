@@ -1,0 +1,15 @@
+# Render 蓝图：把这个仓库直接部署成一个免费 Web 服务
+# 用法：把本文件放在仓库根目录，Render 里选 New → Blueprint 指向该仓库即可
+services:
+  - type: web
+    name: dsh-arcade
+    runtime: node
+    plan: free
+    region: singapore
+    buildCommand: npm install --omit=dev
+    startCommand: node gomoku-server.mjs
+    healthCheckPath: /
+    autoDeploy: true
+    envVars:
+      - key: NODE_VERSION
+        value: "20"
